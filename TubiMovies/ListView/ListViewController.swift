@@ -36,6 +36,7 @@ class ListViewController: UITableViewController {
     }
 
     func configureTableView() {
+        ListViewCell.registerForTableView(tableView)
         //To get rid of trailing hairlines
         tableView.tableFooterView = UIView()
     }
@@ -46,6 +47,24 @@ class ListViewController: UITableViewController {
 
     func loadMovies() {
         viewModel.loadMovies()
+    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.movieList.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let listViewCell = tableView.dequeueReusableCell(withIdentifier: ListViewCell.identifier()) as! ListViewCell
+        listViewCell.configureCell(movieListItem: viewModel.movieList[indexPath.row])
+        return listViewCell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
 

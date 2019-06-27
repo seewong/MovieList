@@ -15,6 +15,9 @@
 		F27544DC22C49ECA0095DC72 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27544DB22C49ECA0095DC72 /* LoadingView.xib */; };
 		F27544DE22C49F320095DC72 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544DD22C49F320095DC72 /* LoadingView.swift */; };
 		F27544E022C4A42A0095DC72 /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544DF22C4A42A0095DC72 /* UIView+FromNib.swift */; };
+		F27544E222C4B8280095DC72 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544E122C4B8280095DC72 /* ListViewCell.swift */; };
+		F27544E422C4B8670095DC72 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27544E322C4B8670095DC72 /* ListViewCell.xib */; };
+		F27544E622C4B9D70095DC72 /* UITableViewCell+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544E522C4B9D70095DC72 /* UITableViewCell+Register.swift */; };
 		F28742FC22C1FED5002FFF81 /* MovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28742FB22C1FED5002FFF81 /* MovieListItem.swift */; };
 		F28742FF22C1FFE8002FFF81 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28742FE22C1FFE8002FFF81 /* JSONParser.swift */; };
 		F2974F9E22C1F7AB00C4CCE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2974F9D22C1F7AB00C4CCE8 /* AppDelegate.swift */; };
@@ -57,6 +60,9 @@
 		F27544DB22C49ECA0095DC72 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		F27544DD22C49F320095DC72 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F27544DF22C4A42A0095DC72 /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
+		F27544E122C4B8280095DC72 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		F27544E322C4B8670095DC72 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
+		F27544E522C4B9D70095DC72 /* UITableViewCell+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Register.swift"; sourceTree = "<group>"; };
 		F28742FB22C1FED5002FFF81 /* MovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItem.swift; sourceTree = "<group>"; };
 		F28742FE22C1FFE8002FFF81 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		F2974F9A22C1F7AB00C4CCE8 /* TubiMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubiMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,18 +135,19 @@
 			children = (
 				F2974F9F22C1F7AB00C4CCE8 /* ListViewController.swift */,
 				F27544D622C343D60095DC72 /* ListViewModel.swift */,
+				F27544E122C4B8280095DC72 /* ListViewCell.swift */,
+				F27544E322C4B8670095DC72 /* ListViewCell.xib */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
 		};
-		F27544DA22C49EAB0095DC72 /* Views */ = {
+		F27544DA22C49EAB0095DC72 /* StateViews */ = {
 			isa = PBXGroup;
 			children = (
 				F27544DB22C49ECA0095DC72 /* LoadingView.xib */,
 				F27544DD22C49F320095DC72 /* LoadingView.swift */,
-				F27544DF22C4A42A0095DC72 /* UIView+FromNib.swift */,
 			);
-			path = Views;
+			path = StateViews;
 			sourceTree = "<group>";
 		};
 		F28742FA22C1FEC2002FFF81 /* Models */ = {
@@ -154,8 +161,10 @@
 		F28742FD22C1FFDC002FFF81 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F27544DF22C4A42A0095DC72 /* UIView+FromNib.swift */,
 				F28742FE22C1FFE8002FFF81 /* JSONParser.swift */,
 				F27544D822C34D800095DC72 /* NetworkingService.swift */,
+				F27544E522C4B9D70095DC72 /* UITableViewCell+Register.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -191,8 +200,8 @@
 				F2974FA622C1F7AC00C4CCE8 /* LaunchScreen.storyboard */,
 				F27544D522C343BE0095DC72 /* ListView */,
 				F28742FA22C1FEC2002FFF81 /* Models */,
+				F27544DA22C49EAB0095DC72 /* StateViews */,
 				F28742FD22C1FFDC002FFF81 /* Utilities */,
-				F27544DA22C49EAB0095DC72 /* Views */,
 			);
 			path = TubiMovies;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27544E422C4B8670095DC72 /* ListViewCell.xib in Resources */,
 				F27544DC22C49ECA0095DC72 /* LoadingView.xib in Resources */,
 				F2974FA822C1F7AC00C4CCE8 /* LaunchScreen.storyboard in Resources */,
 				F2974FA522C1F7AC00C4CCE8 /* Assets.xcassets in Resources */,
@@ -424,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27544E622C4B9D70095DC72 /* UITableViewCell+Register.swift in Sources */,
 				F27544E022C4A42A0095DC72 /* UIView+FromNib.swift in Sources */,
 				F27544D722C343D60095DC72 /* ListViewModel.swift in Sources */,
 				F2974FA022C1F7AB00C4CCE8 /* ListViewController.swift in Sources */,
@@ -431,6 +442,7 @@
 				F27544D922C34D800095DC72 /* NetworkingService.swift in Sources */,
 				F28742FF22C1FFE8002FFF81 /* JSONParser.swift in Sources */,
 				F27544DE22C49F320095DC72 /* LoadingView.swift in Sources */,
+				F27544E222C4B8280095DC72 /* ListViewCell.swift in Sources */,
 				F28742FC22C1FED5002FFF81 /* MovieListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

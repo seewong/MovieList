@@ -19,6 +19,9 @@ public class ListViewModel {
     weak var delegate: ListViewModelDelegate?
     let disposeBag = DisposeBag()
 
+    var movieList: [MovieListItem] = []
+
+    //Network service can be injected for testing
     init(networkingService: NetworkingServiceType = NetworkingService()) {
         self.networkingService = networkingService
     }
@@ -27,7 +30,7 @@ public class ListViewModel {
         self.delegate?.networkState(state: .loading)
         networkingService.getAllMovies()
             .subscribe(onNext: { [weak self] movieList in
-                print(movieList)
+                self?.movieList = movieList
                 self?.delegate?.networkState(state: .loaded)
             }, onError: { (error) in
                 print(error)

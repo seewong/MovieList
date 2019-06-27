@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension UIView {
+    public class func identifier() -> String {
+        return String(describing: self)
+    }
+
     public static func fromNib(withOwner owner: AnyObject! = nil) -> Self {
         return firstView(ofNibNamed: "\(self)", bundle: Bundle(for: self), owner: owner)
     }
