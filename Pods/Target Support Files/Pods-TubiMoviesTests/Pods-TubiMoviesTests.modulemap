@@ -1,0 +1,6 @@
+framework module Pods_TubiMoviesTests {
+  umbrella header "Pods-TubiMoviesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
