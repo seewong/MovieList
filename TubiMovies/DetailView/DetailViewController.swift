@@ -17,8 +17,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 
-    init(id: String) {
-        self.viewModel = DetailViewModel(id: id)
+    init(id: String,
+         networkingService: NetworkingServiceType = NetworkingService()) {
+        self.viewModel = DetailViewModel(id: id, networkingService: networkingService)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -42,7 +43,6 @@ extension DetailViewController: DetailViewModelDelegate {
             self.view.addSubview(loadingView)
             loadingView.constraints_matchSuperview()
         case .loaded:
-            print("loaded")
             loadingView.removeFromSuperview()
             guard let movie = viewModel.movie else { return }
             self.titleLabel.text = movie.title

@@ -18,6 +18,7 @@ public protocol NetworkingServiceType {
 
 public class NetworkingService: NetworkingServiceType {
     private let disposeBag = DisposeBag()
+    private let cache: DetailCache<String, MovieListItem> = DetailCache(size: 5)
 
     public func getAllMovies() -> Observable<[MovieListItem]> {
         return Observable<[MovieListItem]>.create { (observer) -> Disposable in
@@ -37,19 +38,25 @@ public class NetworkingService: NetworkingServiceType {
     }
 
     public func getMovie(id: String) -> Observable<MovieListItem> {
-        return Observable<MovieListItem>.create { (observer) -> Disposable in
-            let url = "https://us-central1-modern-venture-600.cloudfunctions.net/api/movies/" + id
-            let request = Alamofire.request(url)
-                .response(completionHandler: { (response) in
-                    if let error = response.error {
-                        observer.onError(error)
-                    } else if let data = response.data, let item = JSONParser.shared.parse(data: data, type: MovieListItem.self) {
-                        observer.onNext(item)
-                        observer.onCompleted()
-                    }
-                })
-            return Disposables.create {
-                request.cancel()
+        if let movie = self.cache.get(key: id) {
+            return Observable.just(movie)
+        } else {
+            return Observable<MovieListItem>.create { [weak self] (observer) -> Disposable in
+                let url = "https://us-central1-modern-venture-600.cloudfunctions.net/api/movies/" + id
+                let request = Alamofire.request(url)
+                    .response(completionHandler: { (response) in
+                        if let error = response.error {
+                            observer.onError(error)
+                        } else if let data = response.data, let item = JSONParser.shared.parse(data: data, type: MovieListItem.self) {
+                            observer.onNext(item)
+                            observer.onCompleted()
+
+                            self?.cache.add(key: id, val: item)
+                        }
+                    })
+                return Disposables.create {
+                    request.cancel()
+                }
             }
         }
     }

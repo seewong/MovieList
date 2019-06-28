@@ -14,6 +14,9 @@
 		855CD76322C694F20099C357 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76222C694F20099C357 /* DetailViewModel.swift */; };
 		855CD76522C69B340099C357 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76422C69B340099C357 /* UIView+Constraints.swift */; };
 		855CD76B22C6A4800099C357 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855CD76A22C6A4800099C357 /* DetailViewController.xib */; };
+		855CD76D22C6B9920099C357 /* DetailCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76C22C6B9920099C357 /* DetailCache.swift */; };
+		855CD77022C6BADD0099C357 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */; };
+		855CD77222C6BBBE0099C357 /* DoublyLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */; };
 		F27544D722C343D60095DC72 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544D622C343D60095DC72 /* ListViewModel.swift */; };
 		F27544D922C34D800095DC72 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544D822C34D800095DC72 /* NetworkingService.swift */; };
 		F27544DC22C49ECA0095DC72 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27544DB22C49ECA0095DC72 /* LoadingView.xib */; };
@@ -58,6 +61,9 @@
 		855CD76222C694F20099C357 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		855CD76422C69B340099C357 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		855CD76A22C6A4800099C357 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		855CD76C22C6B9920099C357 /* DetailCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCache.swift; sourceTree = "<group>"; };
+		855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListNode.swift; sourceTree = "<group>"; };
 		88CC9F95BA402E6E7A37A45D /* Pods-TubiMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMovies/Pods-TubiMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		97D9D999DC771C7999BA7436 /* Pods-TubiMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMoviesTests/Pods-TubiMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		99F6149FC340836D49E049E9 /* Pods-TubiMoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMoviesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMoviesUITests/Pods-TubiMoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +129,16 @@
 				855CD76222C694F20099C357 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		855CD76E22C6BA960099C357 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				855CD76C22C6B9920099C357 /* DetailCache.swift */,
+				855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */,
+				855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		D639631929A72334D38D7067 /* Frameworks */ = {
@@ -217,6 +233,7 @@
 				F2974F9D22C1F7AB00C4CCE8 /* AppDelegate.swift */,
 				F2974FA422C1F7AC00C4CCE8 /* Assets.xcassets */,
 				F2974FA622C1F7AC00C4CCE8 /* LaunchScreen.storyboard */,
+				855CD76E22C6BA960099C357 /* Cache */,
 				855CD75F22C691350099C357 /* DetailView */,
 				F27544D522C343BE0095DC72 /* ListView */,
 				F28742FA22C1FEC2002FFF81 /* Models */,
@@ -480,7 +497,10 @@
 				F27544D922C34D800095DC72 /* NetworkingService.swift in Sources */,
 				855CD76322C694F20099C357 /* DetailViewModel.swift in Sources */,
 				F28742FF22C1FFE8002FFF81 /* JSONParser.swift in Sources */,
+				855CD77022C6BADD0099C357 /* DoublyLinkedList.swift in Sources */,
 				F27544DE22C49F320095DC72 /* LoadingView.swift in Sources */,
+				855CD76D22C6B9920099C357 /* DetailCache.swift in Sources */,
+				855CD77222C6BBBE0099C357 /* DoublyLinkedListNode.swift in Sources */,
 				F27544E222C4B8280095DC72 /* ListViewCell.swift in Sources */,
 				F28742FC22C1FED5002FFF81 /* MovieListItem.swift in Sources */,
 			);

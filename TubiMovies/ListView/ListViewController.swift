@@ -17,9 +17,11 @@ public enum NetworkState {
 class ListViewController: UITableViewController {
     let viewModel: ListViewModel
     let loadingView = LoadingView.fromNib()
+    let networkingService: NetworkingServiceType
 
     init() {
         self.viewModel = ListViewModel()
+        self.networkingService = NetworkingService()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -54,7 +56,7 @@ class ListViewController: UITableViewController {
     }
 
     func navigateToDetail(id: String) {
-        let detailViewController = DetailViewController(id: id)
+        let detailViewController = DetailViewController(id: id, networkingService: networkingService)
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 
