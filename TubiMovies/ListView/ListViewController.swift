@@ -43,6 +43,14 @@ class ListViewController: UITableViewController {
 
     func configureTableView() {
         ListViewCell.registerForTableView(tableView)
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(loadMovies), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        self.refreshControl = refreshControl
         //To get rid of trailing hairlines
         tableView.tableFooterView = UIView()
     }
@@ -51,7 +59,7 @@ class ListViewController: UITableViewController {
         viewModel.delegate = self
     }
 
-    func loadMovies() {
+    @objc func loadMovies() {
         viewModel.loadMovies()
     }
 
@@ -87,10 +95,12 @@ extension ListViewController: ListViewModelDelegate {
             self.tableView.backgroundView = loadingView
         case .loaded:
             self.tableView.backgroundView = nil
+            self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         case .error:
             print("error")
             //replace with error message view
+            self.refreshControl?.endRefreshing()
             self.tableView.backgroundView = nil
         }
     }
