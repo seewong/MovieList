@@ -29,6 +29,10 @@ class ListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "Movie List"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         configureTableView()
         configureViewModel()
 
@@ -74,7 +78,6 @@ extension ListViewController: ListViewModelDelegate {
         case .loading:
             self.tableView.backgroundView = loadingView
         case .loaded:
-            print("loaded")
             self.tableView.backgroundView = nil
             self.tableView.reloadData()
         case .error:

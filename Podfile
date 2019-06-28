@@ -7,6 +7,7 @@ target 'TubiMovies' do
   pod 'Alamofire', '4.7.3'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'SDWebImage', '~> 5.0'
 
   # Pods for TubiMovies
 

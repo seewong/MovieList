@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 public class ListViewCell: UITableViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
@@ -15,6 +16,6 @@ public class ListViewCell: UITableViewCell {
 
     func configureCell(movieListItem: MovieListItem) {
         self.titleLabel.text = movieListItem.title
-        self.thumbnail.image = #imageLiteral(resourceName: "default-movie")
+        self.thumbnail.sd_setImage(with: URL(string: movieListItem.imageURL), placeholderImage: #imageLiteral(resourceName: "default-movie"))
     }
 }

@@ -19,17 +19,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldn-i8-VCK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="71.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aid-L2-Q37">
-                                <rect key="frame" x="8" y="8.5" width="56" height="56"/>
+                                <rect key="frame" x="8" y="8" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="Gil-TG-0Bz"/>
                                     <constraint firstAttribute="height" constant="56" id="vcE-cS-jOR"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQQ-3m-KsJ">
-                                <rect key="frame" x="80" y="16.5" width="318" height="40"/>
+                                <rect key="frame" x="80" y="16" width="318" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39.5" id="X5J-x9-ZA3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,8 +44,6 @@
                             <constraint firstAttribute="trailing" secondItem="kQQ-3m-KsJ" secondAttribute="trailing" constant="16" id="6bu-vn-n4g"/>
                             <constraint firstItem="kQQ-3m-KsJ" firstAttribute="top" secondItem="Ldn-i8-VCK" secondAttribute="top" constant="16" id="8Cq-nG-awl"/>
                             <constraint firstItem="Aid-L2-Q37" firstAttribute="centerY" secondItem="Ldn-i8-VCK" secondAttribute="centerY" id="G0j-Jm-S1E"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Aid-L2-Q37" secondAttribute="bottom" constant="8" id="Uvp-vr-9hG"/>
-                            <constraint firstItem="Aid-L2-Q37" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ldn-i8-VCK" secondAttribute="top" constant="8" id="hoj-xe-AjW"/>
                             <constraint firstAttribute="bottom" secondItem="kQQ-3m-KsJ" secondAttribute="bottom" constant="16" id="jMe-6g-aMz"/>
                             <constraint firstItem="kQQ-3m-KsJ" firstAttribute="leading" secondItem="Aid-L2-Q37" secondAttribute="trailing" constant="16" id="vRb-oj-Hem"/>
                         </constraints>
