@@ -17,6 +17,7 @@
 		855CD77022C6BADD0099C357 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */; };
 		855CD77222C6BBBE0099C357 /* DoublyLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */; };
 		855CD77422C6D4860099C357 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD77322C6D4860099C357 /* CacheTests.swift */; };
+		85BBA89922C6DD5D00C92984 /* AlertController+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BBA89822C6DD5D00C92984 /* AlertController+Retry.swift */; };
 		F27544D722C343D60095DC72 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544D622C343D60095DC72 /* ListViewModel.swift */; };
 		F27544D922C34D800095DC72 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544D822C34D800095DC72 /* NetworkingService.swift */; };
 		F27544DC22C49ECA0095DC72 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27544DB22C49ECA0095DC72 /* LoadingView.xib */; };
@@ -57,6 +58,7 @@
 		855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListNode.swift; sourceTree = "<group>"; };
 		855CD77322C6D4860099C357 /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		85BBA89822C6DD5D00C92984 /* AlertController+Retry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Retry.swift"; sourceTree = "<group>"; };
 		88CC9F95BA402E6E7A37A45D /* Pods-TubiMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMovies/Pods-TubiMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		97D9D999DC771C7999BA7436 /* Pods-TubiMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMoviesTests/Pods-TubiMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		99F6149FC340836D49E049E9 /* Pods-TubiMoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMoviesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMoviesUITests/Pods-TubiMoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		F28742FD22C1FFDC002FFF81 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				85BBA89822C6DD5D00C92984 /* AlertController+Retry.swift */,
 				F28742FE22C1FFE8002FFF81 /* JSONParser.swift */,
 				F27544D822C34D800095DC72 /* NetworkingService.swift */,
 				F27544E522C4B9D70095DC72 /* UITableViewCell+Register.swift */,
@@ -418,6 +421,7 @@
 				F2974FA022C1F7AB00C4CCE8 /* ListViewController.swift in Sources */,
 				F2974F9E22C1F7AB00C4CCE8 /* AppDelegate.swift in Sources */,
 				F27544D922C34D800095DC72 /* NetworkingService.swift in Sources */,
+				85BBA89922C6DD5D00C92984 /* AlertController+Retry.swift in Sources */,
 				855CD76322C694F20099C357 /* DetailViewModel.swift in Sources */,
 				F28742FF22C1FFE8002FFF81 /* JSONParser.swift in Sources */,
 				855CD77022C6BADD0099C357 /* DoublyLinkedList.swift in Sources */,

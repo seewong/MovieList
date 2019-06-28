@@ -52,7 +52,10 @@ extension DetailViewController: DetailViewModelDelegate {
                 self.bottomLabel.text = "Index: " + String(index)
             }
         case .error:
-            print("error")
+            let tryAgainAlert = UIAlertController.tryAgainAlert(title: "Unable to Fetch Movie", message: "Please try again") { [weak self] in
+                self?.viewModel.loadMovie()
+            }
+            self.present(tryAgainAlert, animated: true, completion: nil)
         }
     }
 }

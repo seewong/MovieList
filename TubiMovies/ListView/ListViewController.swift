@@ -102,6 +102,10 @@ extension ListViewController: ListViewModelDelegate {
             //replace with error message view
             self.refreshControl?.endRefreshing()
             self.tableView.backgroundView = nil
+            let tryAgainAlert = UIAlertController.tryAgainAlert(title: "Unable to Fetch Movies", message: "Please try again") { [weak self] in
+                self?.loadMovies()
+            }
+            self.present(tryAgainAlert, animated: true, completion: nil)
         }
     }
 }
