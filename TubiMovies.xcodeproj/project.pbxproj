@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6D69D4E522CA2056B8E0440C /* Pods_TubiMoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2845FCA0EF5EBBC038C7F33D /* Pods_TubiMoviesTests.framework */; };
 		7E48749969773AAA920E4E31 /* Pods_TubiMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667D66945FE30FBAF6D4D2CA /* Pods_TubiMovies.framework */; };
-		84A5F7C2E99FC2EC2E7A305D /* Pods_TubiMoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B370B5392CF1C3712A2BBBC /* Pods_TubiMoviesUITests.framework */; };
 		855CD76122C691620099C357 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76022C691620099C357 /* DetailViewController.swift */; };
 		855CD76322C694F20099C357 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76222C694F20099C357 /* DetailViewModel.swift */; };
 		855CD76522C69B340099C357 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76422C69B340099C357 /* UIView+Constraints.swift */; };
@@ -17,6 +16,7 @@
 		855CD76D22C6B9920099C357 /* DetailCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76C22C6B9920099C357 /* DetailCache.swift */; };
 		855CD77022C6BADD0099C357 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */; };
 		855CD77222C6BBBE0099C357 /* DoublyLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */; };
+		855CD77422C6D4860099C357 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD77322C6D4860099C357 /* CacheTests.swift */; };
 		F27544D722C343D60095DC72 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544D622C343D60095DC72 /* ListViewModel.swift */; };
 		F27544D922C34D800095DC72 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27544D822C34D800095DC72 /* NetworkingService.swift */; };
 		F27544DC22C49ECA0095DC72 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27544DB22C49ECA0095DC72 /* LoadingView.xib */; };
@@ -32,18 +32,10 @@
 		F2974FA522C1F7AC00C4CCE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2974FA422C1F7AC00C4CCE8 /* Assets.xcassets */; };
 		F2974FA822C1F7AC00C4CCE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2974FA622C1F7AC00C4CCE8 /* LaunchScreen.storyboard */; };
 		F2974FB322C1F7AC00C4CCE8 /* TubiMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2974FB222C1F7AC00C4CCE8 /* TubiMoviesTests.swift */; };
-		F2974FBE22C1F7AC00C4CCE8 /* TubiMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2974FBD22C1F7AC00C4CCE8 /* TubiMoviesUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F2974FAF22C1F7AC00C4CCE8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2974F9222C1F7AB00C4CCE8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F2974F9922C1F7AB00C4CCE8;
-			remoteInfo = TubiMovies;
-		};
-		F2974FBA22C1F7AC00C4CCE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2974F9222C1F7AB00C4CCE8 /* Project object */;
 			proxyType = 1;
@@ -64,6 +56,7 @@
 		855CD76C22C6B9920099C357 /* DetailCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCache.swift; sourceTree = "<group>"; };
 		855CD76F22C6BADD0099C357 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		855CD77122C6BBBE0099C357 /* DoublyLinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListNode.swift; sourceTree = "<group>"; };
+		855CD77322C6D4860099C357 /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
 		88CC9F95BA402E6E7A37A45D /* Pods-TubiMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMovies/Pods-TubiMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		97D9D999DC771C7999BA7436 /* Pods-TubiMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMoviesTests/Pods-TubiMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		99F6149FC340836D49E049E9 /* Pods-TubiMoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubiMoviesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubiMoviesUITests/Pods-TubiMoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,9 +81,6 @@
 		F2974FAE22C1F7AC00C4CCE8 /* TubiMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubiMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2974FB222C1F7AC00C4CCE8 /* TubiMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubiMoviesTests.swift; sourceTree = "<group>"; };
 		F2974FB422C1F7AC00C4CCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2974FB922C1F7AC00C4CCE8 /* TubiMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubiMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2974FBD22C1F7AC00C4CCE8 /* TubiMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubiMoviesUITests.swift; sourceTree = "<group>"; };
-		F2974FBF22C1F7AC00C4CCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +97,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D69D4E522CA2056B8E0440C /* Pods_TubiMoviesTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2974FB622C1F7AC00C4CCE8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84A5F7C2E99FC2EC2E7A305D /* Pods_TubiMoviesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +191,6 @@
 			children = (
 				F2974F9C22C1F7AB00C4CCE8 /* TubiMovies */,
 				F2974FB122C1F7AC00C4CCE8 /* TubiMoviesTests */,
-				F2974FBC22C1F7AC00C4CCE8 /* TubiMoviesUITests */,
 				F2974F9B22C1F7AB00C4CCE8 /* Products */,
 				E5E427FF9BF014C8CB05B327 /* Pods */,
 				D639631929A72334D38D7067 /* Frameworks */,
@@ -221,7 +202,6 @@
 			children = (
 				F2974F9A22C1F7AB00C4CCE8 /* TubiMovies.app */,
 				F2974FAE22C1F7AC00C4CCE8 /* TubiMoviesTests.xctest */,
-				F2974FB922C1F7AC00C4CCE8 /* TubiMoviesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,19 +226,11 @@
 		F2974FB122C1F7AC00C4CCE8 /* TubiMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
-				F2974FB222C1F7AC00C4CCE8 /* TubiMoviesTests.swift */,
 				F2974FB422C1F7AC00C4CCE8 /* Info.plist */,
+				855CD77322C6D4860099C357 /* CacheTests.swift */,
+				F2974FB222C1F7AC00C4CCE8 /* TubiMoviesTests.swift */,
 			);
 			path = TubiMoviesTests;
-			sourceTree = "<group>";
-		};
-		F2974FBC22C1F7AC00C4CCE8 /* TubiMoviesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F2974FBD22C1F7AC00C4CCE8 /* TubiMoviesUITests.swift */,
-				F2974FBF22C1F7AC00C4CCE8 /* Info.plist */,
-			);
-			path = TubiMoviesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,25 +274,6 @@
 			productReference = F2974FAE22C1F7AC00C4CCE8 /* TubiMoviesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F2974FB822C1F7AC00C4CCE8 /* TubiMoviesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F2974FC822C1F7AC00C4CCE8 /* Build configuration list for PBXNativeTarget "TubiMoviesUITests" */;
-			buildPhases = (
-				903F1F13E3EC2583666B7C92 /* [CP] Check Pods Manifest.lock */,
-				F2974FB522C1F7AC00C4CCE8 /* Sources */,
-				F2974FB622C1F7AC00C4CCE8 /* Frameworks */,
-				F2974FB722C1F7AC00C4CCE8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F2974FBB22C1F7AC00C4CCE8 /* PBXTargetDependency */,
-			);
-			name = TubiMoviesUITests;
-			productName = TubiMoviesUITests;
-			productReference = F2974FB922C1F7AC00C4CCE8 /* TubiMoviesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -335,10 +288,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					F2974FAD22C1F7AC00C4CCE8 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = F2974F9922C1F7AB00C4CCE8;
-					};
-					F2974FB822C1F7AC00C4CCE8 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = F2974F9922C1F7AB00C4CCE8;
 					};
@@ -359,7 +308,6 @@
 			targets = (
 				F2974F9922C1F7AB00C4CCE8 /* TubiMovies */,
 				F2974FAD22C1F7AC00C4CCE8 /* TubiMoviesTests */,
-				F2974FB822C1F7AC00C4CCE8 /* TubiMoviesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,13 +326,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F2974FAC22C1F7AC00C4CCE8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2974FB722C1F7AC00C4CCE8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,24 +385,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TubiMovies/Pods-TubiMovies-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		903F1F13E3EC2583666B7C92 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TubiMoviesUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F98071328E4429E9ABCD41AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,15 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855CD77422C6D4860099C357 /* CacheTests.swift in Sources */,
 				F2974FB322C1F7AC00C4CCE8 /* TubiMoviesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2974FB522C1F7AC00C4CCE8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2974FBE22C1F7AC00C4CCE8 /* TubiMoviesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,11 +445,6 @@
 			isa = PBXTargetDependency;
 			target = F2974F9922C1F7AB00C4CCE8 /* TubiMovies */;
 			targetProxy = F2974FAF22C1F7AC00C4CCE8 /* PBXContainerItemProxy */;
-		};
-		F2974FBB22C1F7AC00C4CCE8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F2974F9922C1F7AB00C4CCE8 /* TubiMovies */;
-			targetProxy = F2974FBA22C1F7AC00C4CCE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -743,46 +654,6 @@
 			};
 			name = Release;
 		};
-		F2974FC922C1F7AC00C4CCE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 795416BDE4E8DE6E664C0B1F /* Pods-TubiMoviesUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TubiMoviesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CWong.TubiMoviesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TubiMovies;
-			};
-			name = Debug;
-		};
-		F2974FCA22C1F7AC00C4CCE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99F6149FC340836D49E049E9 /* Pods-TubiMoviesUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TubiMoviesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CWong.TubiMoviesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TubiMovies;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -809,15 +680,6 @@
 			buildConfigurations = (
 				F2974FC622C1F7AC00C4CCE8 /* Debug */,
 				F2974FC722C1F7AC00C4CCE8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F2974FC822C1F7AC00C4CCE8 /* Build configuration list for PBXNativeTarget "TubiMoviesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F2974FC922C1F7AC00C4CCE8 /* Debug */,
-				F2974FCA22C1F7AC00C4CCE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

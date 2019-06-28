@@ -10,7 +10,7 @@ import Foundation
 
 class DetailCache<K: Hashable, V> {
     fileprivate let maxSize: Int
-    fileprivate var currentSize: Int = 0
+    public var currentSize: Int = 0
     fileprivate let linkedList: DoublyLinkedList<K, V>
     fileprivate var dict: [K: DoublyLinkedListNode<K, V>]
 

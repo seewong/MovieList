@@ -14,7 +14,7 @@ public class ListViewCell: UITableViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
 
-    func configureCell(movieListItem: MovieListItem) {
+    func configureCell(movieListItem: Movie) {
         self.titleLabel.text = movieListItem.title
         self.thumbnail.sd_setImage(with: URL(string: movieListItem.imageURL), placeholderImage: #imageLiteral(resourceName: "default-movie"))
     }

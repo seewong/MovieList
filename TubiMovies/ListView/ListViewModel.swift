@@ -19,7 +19,7 @@ public class ListViewModel {
     weak var delegate: ListViewModelDelegate?
     let disposeBag = DisposeBag()
 
-    var movieList: [MovieListItem] = []
+    var movieList: [Movie] = []
 
     //Network service can be injected for testing
     init(networkingService: NetworkingServiceType = NetworkingService()) {

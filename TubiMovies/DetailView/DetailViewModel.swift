@@ -18,7 +18,7 @@ class DetailViewModel {
     let id: String
     let networkingService: NetworkingServiceType
     let disposeBag = DisposeBag()
-    var movie: MovieListItem?
+    var movie: Movie?
 
     init(id: String,
          networkingService: NetworkingServiceType = NetworkingService()) {

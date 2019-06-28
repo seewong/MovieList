@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="TubiMovies" customModuleProvider="target">
             <connections>
+                <outlet property="bottomLabel" destination="ivE-BE-wLO" id="X3H-xf-pMt"/>
                 <outlet property="imageView" destination="rA0-VA-SSd" id="dWr-i4-apD"/>
                 <outlet property="titleLabel" destination="f1N-8g-avz" id="gkI-sp-tbb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2e3-U5-HQh"/>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw7-hK-mfg">
-                    <rect key="frame" x="0.0" y="191" width="414" height="514"/>
+                    <rect key="frame" x="0.0" y="173" width="414" height="550"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1N-8g-avz">
                             <rect key="frame" x="178.5" y="24" width="57" height="29"/>
@@ -38,19 +39,29 @@
                                 <constraint firstAttribute="width" priority="750" constant="360" id="tEP-8X-kCw"/>
                             </constraints>
                         </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivE-BE-wLO">
+                            <rect key="frame" x="186" y="500" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="f1N-8g-avz" firstAttribute="centerX" secondItem="Pw7-hK-mfg" secondAttribute="centerX" id="1oT-GR-rNf"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f1N-8g-avz" secondAttribute="trailing" constant="16" id="J1s-kB-l6X"/>
+                        <constraint firstAttribute="bottom" secondItem="ivE-BE-wLO" secondAttribute="bottom" constant="29" id="LyN-ii-sgC"/>
                         <constraint firstItem="rA0-VA-SSd" firstAttribute="centerX" secondItem="Pw7-hK-mfg" secondAttribute="centerX" id="Nee-MP-j0U"/>
                         <constraint firstItem="f1N-8g-avz" firstAttribute="top" secondItem="Pw7-hK-mfg" secondAttribute="top" constant="24" id="Scc-Gt-ZLU"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rA0-VA-SSd" secondAttribute="trailing" constant="16" id="TvN-V6-rCc"/>
                         <constraint firstItem="rA0-VA-SSd" firstAttribute="top" secondItem="f1N-8g-avz" secondAttribute="bottom" constant="48" id="WQQ-15-fUn"/>
+                        <constraint firstItem="ivE-BE-wLO" firstAttribute="centerX" secondItem="Pw7-hK-mfg" secondAttribute="centerX" id="a3Q-Ae-xXO"/>
                         <constraint firstItem="rA0-VA-SSd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pw7-hK-mfg" secondAttribute="leading" constant="16" id="d8n-iA-9Ip"/>
-                        <constraint firstAttribute="height" constant="514" id="fEe-be-bIq"/>
+                        <constraint firstAttribute="height" constant="550" id="fEe-be-bIq"/>
                         <constraint firstItem="f1N-8g-avz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pw7-hK-mfg" secondAttribute="leading" constant="16" id="hP5-hs-9oe"/>
-                        <constraint firstAttribute="bottom" secondItem="rA0-VA-SSd" secondAttribute="bottom" constant="53" id="ulE-qX-bAp"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ivE-BE-wLO" secondAttribute="trailing" constant="16" id="iz1-wH-e9b"/>
+                        <constraint firstItem="ivE-BE-wLO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pw7-hK-mfg" secondAttribute="leading" constant="16" id="qMB-uJ-JOT"/>
+                        <constraint firstItem="ivE-BE-wLO" firstAttribute="top" secondItem="rA0-VA-SSd" secondAttribute="bottom" constant="39" id="yAi-E6-GFg"/>
                     </constraints>
                 </view>
             </subviews>

@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bottomLabel: UILabel!
 
     init(id: String,
          networkingService: NetworkingServiceType = NetworkingService()) {
@@ -47,6 +48,9 @@ extension DetailViewController: DetailViewModelDelegate {
             guard let movie = viewModel.movie else { return }
             self.titleLabel.text = movie.title
             self.imageView.sd_setImage(with: URL(string: movie.imageURL), placeholderImage: #imageLiteral(resourceName: "default-movie"))
+            if let index = movie.index {
+                self.bottomLabel.text = "Index: " + String(index)
+            }
         case .error:
             print("error")
         }

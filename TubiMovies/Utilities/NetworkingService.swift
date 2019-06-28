@@ -11,22 +11,22 @@ import RxSwift
 import Alamofire
 
 public protocol NetworkingServiceType {
-    func getAllMovies() -> Observable<[MovieListItem]>
-    func getMovie(id: String) -> Observable<MovieListItem>
+    func getAllMovies() -> Observable<[Movie]>
+    func getMovie(id: String) -> Observable<Movie>
 }
 
 
 public class NetworkingService: NetworkingServiceType {
     private let disposeBag = DisposeBag()
-    private let cache: DetailCache<String, MovieListItem> = DetailCache(size: 5)
+    private let cache: DetailCache<String, Movie> = DetailCache(size: 5)
 
-    public func getAllMovies() -> Observable<[MovieListItem]> {
-        return Observable<[MovieListItem]>.create { (observer) -> Disposable in
+    public func getAllMovies() -> Observable<[Movie]> {
+        return Observable<[Movie]>.create { (observer) -> Disposable in
             let request = Alamofire.request("https://us-central1-modern-venture-600.cloudfunctions.net/api/movies")
                 .response(completionHandler: { (response) in
                     if let error = response.error {
                         observer.onError(error)
-                    } else if let data = response.data, let items = JSONParser.shared.parse(data: data, type: [MovieListItem].self) {
+                    } else if let data = response.data, let items = JSONParser.shared.parse(data: data, type: [Movie].self) {
                         observer.onNext(items)
                         observer.onCompleted()
                     }
@@ -37,17 +37,17 @@ public class NetworkingService: NetworkingServiceType {
         }
     }
 
-    public func getMovie(id: String) -> Observable<MovieListItem> {
+    public func getMovie(id: String) -> Observable<Movie> {
         if let movie = self.cache.get(key: id) {
             return Observable.just(movie)
         } else {
-            return Observable<MovieListItem>.create { [weak self] (observer) -> Disposable in
+            return Observable<Movie>.create { [weak self] (observer) -> Disposable in
                 let url = "https://us-central1-modern-venture-600.cloudfunctions.net/api/movies/" + id
                 let request = Alamofire.request(url)
                     .response(completionHandler: { (response) in
                         if let error = response.error {
                             observer.onError(error)
-                        } else if let data = response.data, let item = JSONParser.shared.parse(data: data, type: MovieListItem.self) {
+                        } else if let data = response.data, let item = JSONParser.shared.parse(data: data, type: Movie.self) {
                             observer.onNext(item)
                             observer.onCompleted()
 
