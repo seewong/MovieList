@@ -12,6 +12,7 @@ import Alamofire
 
 public protocol NetworkingServiceType {
     func getAllMovies() -> Observable<[MovieListItem]>
+    func getMovie(id: String) -> Observable<MovieListItem>
 }
 
 
@@ -26,6 +27,24 @@ public class NetworkingService: NetworkingServiceType {
                         observer.onError(error)
                     } else if let data = response.data, let items = JSONParser.shared.parse(data: data, type: [MovieListItem].self) {
                         observer.onNext(items)
+                        observer.onCompleted()
+                    }
+                })
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
+
+    public func getMovie(id: String) -> Observable<MovieListItem> {
+        return Observable<MovieListItem>.create { (observer) -> Disposable in
+            let url = "https://us-central1-modern-venture-600.cloudfunctions.net/api/movies/" + id
+            let request = Alamofire.request(url)
+                .response(completionHandler: { (response) in
+                    if let error = response.error {
+                        observer.onError(error)
+                    } else if let data = response.data, let item = JSONParser.shared.parse(data: data, type: MovieListItem.self) {
+                        observer.onNext(item)
                         observer.onCompleted()
                     }
                 })

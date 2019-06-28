@@ -30,7 +30,7 @@ class ListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Movie List"
+        self.title = "Movies"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         configureTableView()
@@ -53,6 +53,12 @@ class ListViewController: UITableViewController {
         viewModel.loadMovies()
     }
 
+    func navigateToDetail(id: String, title: String) {
+        //We don't pass the full movie item because we assume in a production environment the list item would not be the same as the detail item
+        let detailViewController = DetailViewController(id: id, title: title)
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -68,7 +74,8 @@ class ListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let movie = viewModel.movieList[indexPath.row]
+        navigateToDetail(id: movie.id, title: movie.title)
     }
 }
 
