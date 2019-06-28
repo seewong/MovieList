@@ -8,15 +8,18 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
     let viewModel: DetailViewModel
     let loadingView = LoadingView.fromNib()
 
-    init(id: String, title: String) {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+
+    init(id: String) {
         self.viewModel = DetailViewModel(id: id)
         super.init(nibName: nil, bundle: nil)
-        self.title = title
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -26,6 +29,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Description"
         viewModel.delegate = self
         viewModel.loadMovie()
     }
@@ -39,6 +43,10 @@ extension DetailViewController: DetailViewModelDelegate {
             loadingView.constraints_matchSuperview()
         case .loaded:
             print("loaded")
+            loadingView.removeFromSuperview()
+            guard let movie = viewModel.movie else { return }
+            self.titleLabel.text = movie.title
+            self.imageView.sd_setImage(with: URL(string: movie.imageURL), placeholderImage: #imageLiteral(resourceName: "default-movie"))
         case .error:
             print("error")
         }

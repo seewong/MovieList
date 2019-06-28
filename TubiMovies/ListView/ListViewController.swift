@@ -53,9 +53,8 @@ class ListViewController: UITableViewController {
         viewModel.loadMovies()
     }
 
-    func navigateToDetail(id: String, title: String) {
-        //We don't pass the full movie item because we assume in a production environment the list item would not be the same as the detail item
-        let detailViewController = DetailViewController(id: id, title: title)
+    func navigateToDetail(id: String) {
+        let detailViewController = DetailViewController(id: id)
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 
@@ -74,8 +73,8 @@ class ListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = viewModel.movieList[indexPath.row]
-        navigateToDetail(id: movie.id, title: movie.title)
+        let id = viewModel.movieList[indexPath.row].id
+        navigateToDetail(id: id)
     }
 }
 
